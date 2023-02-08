@@ -15,7 +15,7 @@ export class UserComponent {
   }
 
   foruser(){
-    this.userService.forAdmin().subscribe({
+    this.userService.forUser().subscribe({
       next:(response:any) =>{
         console.log(response);
         this.message = response;
