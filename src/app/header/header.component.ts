@@ -24,7 +24,7 @@ export class HeaderComponent {
   public logout(){
     this.userAuthService.clear();
     this.userAuthService.logIn = false;
-    this.router.navigate(['/home']);
+    this.router.navigate(['/']);
   }
 
   public isLoggedOut(){
