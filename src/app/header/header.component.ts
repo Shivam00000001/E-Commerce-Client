@@ -31,4 +31,12 @@ export class HeaderComponent {
     return !this.isLoggedIn();
   }
 
+  public isAdmin(){
+    return this.userAuthService.isAdmin();
+  }
+
+  public isUser(){
+    return this.userAuthService.isUser();
+  }
+
 }
