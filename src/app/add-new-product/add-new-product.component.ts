@@ -26,6 +26,7 @@ export class AddNewProductComponent {
     this.productService.addProduct(productFormData).subscribe({
       next: (response:any) => {
         productForm.reset();
+        this.product.productImages = [];
       },
       error: (err) => console.log(err),
       complete:() => console.log("Completed")
@@ -57,5 +58,8 @@ export class AddNewProductComponent {
   }
   removeImage(i:number){
     this.product.productImages.splice(i, 1);
+  }
+  fileDropped(fileHandle: FileHandle) {
+    this.product.productImages.push(fileHandle);
   }
 }
