@@ -55,4 +55,7 @@ export class AddNewProductComponent {
       this.product.productImages.push(fileHandle);
     }
   }
+  removeImage(i:number){
+    this.product.productImages.splice(i, 1);
+  }
 }
