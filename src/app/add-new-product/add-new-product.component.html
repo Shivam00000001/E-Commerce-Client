@@ -20,7 +20,8 @@
                         <input matInput [(ngModel)]="product.productDiscountedPrice" name="productDiscountedPrice" placeholder="Product Discounted Price">
                     </mat-form-field>
                     <div align="right">                    
-                    <button mat-stroked-button type="submit" color="primary">Add Product</button>
+                    <button mat-stroked-button type="submit" *ngIf="isNewproduct" color="primary">Add Product</button>                    
+                    <button mat-stroked-button type="submit" *ngIf="!isNewproduct" color="primary">Update Product</button>
                     <button mat-stroked-button type="reset" color="primary" style="margin-right: 3px;">Clear</button>
                     </div> 
                 </form>
